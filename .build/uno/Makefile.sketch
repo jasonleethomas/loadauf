@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/drive_main.cpp : src/drive_main.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/drive_main.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/drive_main.cpp
+	@true
+
